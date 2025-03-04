@@ -9,25 +9,24 @@
 📌 **Klik di bawah ini untuk mengakses materi:**
 
 <h3 align="center">
-  >> <a href="https://github.com/Swordigo15/PraktikumKP2023/blob/main/Daftar%20Materi.md">📖 Materi Praktikum</a> <<
+  >> <a href="#">📖 Materi Praktikum</a> <<
 </h3>
 
 ## 🛠 Persiapan Praktikum
 
-🔹 **C++ Compiler:** [MinGW](https://osdn.net/projects/mingw/releases/)
+🔹 **Java Development Kit (JDK):** [JDK 23](https://www.oracle.com/java/technologies/downloads/)
 
 🔹 **IDE (Opsional):**
 
-- [CLion](https://www.jetbrains.com/clion/download/)
-- [DevC++](https://sourceforge.net/projects/orwelldevcpp/)
-- [CodeBlocks](http://www.codeblocks.org/downloads/)
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
+- [Eclipse](https://www.eclipse.org/downloads/)
+- [NetBeans](https://netbeans.apache.org/download/index.html)
 
 🔹 **Text Editor (Opsional):**
 
 - [VS Code](https://code.visualstudio.com/download)
 - [Sublime Text](https://www.sublimetext.com/download)
 - [Atom](https://github.com/atom/atom/releases) _(Discontinued, tapi masih bisa diunduh)_
-
 
 ## 🤝 Tim Asisten Praktikum
 
@@ -48,7 +47,6 @@
 </table>
 </div>
 
-
 ## 💬 Hubungi Kami
 
 📢 **Bergabung di grup WhatsApp untuk diskusi praktikum:**
@@ -62,9 +60,10 @@
 ## ⚙ Language & Tools
 
 <p align="center">
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"/>
   <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"/>
-  <img src="https://img.shields.io/badge/MinGW-00427E?style=for-the-badge&logo=windows-terminal&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/>
+  <img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white"/>
 </p>
 
 <p align="center">
