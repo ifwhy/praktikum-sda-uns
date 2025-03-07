@@ -17,10 +17,10 @@ const config = {
   favicon: 'img/Java-Logo.png',
 
   // Set the production url of your site here
-  url: 'https://ifwhy.github.io',
+  url: 'https://praktikum-sda-uns.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/praktikum-sda-uns/',
+  baseUrl: '/',
   trailingSlash: false,
 
   // GitHub pages deployment config.
