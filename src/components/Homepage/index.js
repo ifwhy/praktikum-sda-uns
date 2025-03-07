@@ -38,7 +38,7 @@ function HomepageHeader() {
           asChild
           className='border-2 border-white bg-white text-black transition-all duration-300 hover:bg-transparent hover:text-white'
         >
-          <Link to='/docs/intro'>🚀 Materi Praktikum</Link>
+          <Link to='/docs/materi/intro'>🚀 Materi Praktikum</Link>
         </Button>
       </div>
     </header>
