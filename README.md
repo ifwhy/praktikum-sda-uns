@@ -9,7 +9,7 @@
 📌 **Klik di bawah ini untuk mengakses materi:**
 
 <h3 align="center">
-  >> <a href="https://ifwhy.github.io/praktikum-sda-uns">📖 Materi Praktikum</a> <<
+  >> <a href="https://github.com/ifwhy/praktikum-sda-uns/tree/main/docs/materi">📖 Materi Praktikum</a> <<
 </h3>
 
 ## 🛠 Persiapan Praktikum
