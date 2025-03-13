@@ -18,6 +18,8 @@ List adalah struktur data yang digunakan untuk menyimpan banyak elemen dalam sat
 
 ## 🚀 1.1. ArrayList
 
+<img src="https://miro.medium.com/v2/resize:fit:670/0*5w9-ibvGwT1EpeH9.png" alt="Ilustrasi Array List" width="75%"/>
+
 ### 📌 Deklarasi
 
 ```java
@@ -56,6 +58,8 @@ List<Integer> numbers = new ArrayList<>();
 ---
 
 ## 🔗 1.2. LinkedList
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20220712172013/Singlelinkedlist.png" alt="Ilustrasi Single Linked List" width="75%"/>
 
 ### 📌 Deklarasi
 

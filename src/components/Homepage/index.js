@@ -10,26 +10,26 @@ function HomepageHeader() {
     <header
       className='w-full object-cover px-3 py-36 text-left text-white lg:h-screen'
       style={{
-        backgroundImage: `url('https://www.statcraft.in/UploadImages/76a4eccd-be26-43dd-99c1-c6544f5dbea3_banner.png')`,
+        backgroundImage: `url('https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/PDaTSuJ/videoblocks-4k-2779-blue_smvurnutd_thumbnail-1080_01.png')`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPositionY: 'bottom',
         backgroundPositionX: 'right'
       }}
     >
-      <div className='container'>
-        <Heading as='h1' className='mb-4 text-2xl font-bold md:text-3xl lg:text-5xl'>
+      <div className='container flex h-full w-full flex-col items-center justify-center text-center'>
+        <Heading as='h1' className='mb-4 text-2xl font-bold md:text-3xl lg:text-6xl'>
           Selamat Datang di <br />
         </Heading>
-        <Heading as='h1' className='mb-4 text-2xl font-bold md:text-3xl lg:text-5xl'>
+        <Heading as='h1' className='mb-4 text-2xl font-bold md:text-3xl lg:text-6xl'>
           Praktikum Struktur Data dan Algoritma
         </Heading>
 
-        <p className='mb-4 text-sm md:text-xl lg:text-base'>
+        <p className='mb-4 text-justify text-sm sm:text-center md:text-xl'>
           <span className='mb-1 block font-semibold'>
             Website ini merupakan website yang berisi materi, tugas, dan informasi untuk Praktikum
-            SDA di Informatika UNS. <br /> Praktikum Struktur Data dan Algoritma ini menggunakan
-            bahasa pemrograman Java. <br />
+            SDA di Informatika UNS. <br className='hidden sm:inline' /> Praktikum Struktur Data dan
+            Algoritma ini menggunakan bahasa pemrograman Java. <br className='hidden sm:inline' />
             Materi praktikum dapat di akses melalui <i>link</i> di bawah ini.
           </span>
         </p>

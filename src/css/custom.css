@@ -265,6 +265,45 @@ div[class^='docItemContainer_'] article img {
   -o-border-radius: 7px;
 }
 
+[data-theme='dark'] .navbar {
+  background-color: #010816; /* Replace with your desired color */
+}
+
+/* Optional: Customize navbar items color in dark mode */
+[data-theme='dark'] .navbar__item {
+  color: #fff;
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container {
+  background-color: #010816; /* Change as needed */
+}
+
+[data-theme='dark'] .menu__link {
+  color: #fff; /* Light color for dark background */
+}
+
+/* Optional: Customize Active Sidebar Link */
+[data-theme='dark'] .menu__link--active {
+  color: #fff; /* Highlight active link */
+}
+
+/* 🌙 Customize Main Background in Dark Mode */
+[data-theme='dark'] .main-wrapper {
+  background-color: #010816; /* Change to your preferred dark color */
+}
+
+/* Optional: Change Docs Content Background */
+[data-theme='dark'] .theme-doc-markdown {
+  background-color: #010816; /* Slightly lighter for content */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Optional: Change Text Color for Better Contrast */
+[data-theme='dark'] .theme-doc-markdown p {
+  color: #e0e0e0;
+}
+
 /* Tablet */
 @media screen and (max-width: 991px) {
   /* Search navbar local */

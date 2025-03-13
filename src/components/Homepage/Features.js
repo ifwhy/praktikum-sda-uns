@@ -6,18 +6,25 @@ const FeatureList = [
     img: 'https://github.com/mferdinandr.png',
     ig: 'https://www.instagram.com/m.ferdinram/',
     github: 'https://github.com/mferdindr',
-    description: <>Mahasiswa Informatika UNS 2023</>
+    description: <>Informatika UNS 2023</>
   },
   {
     title: 'Ivan Wahyu Nugroho',
     img: 'https://github.com/ifwhy.png',
     ig: 'https://www.instagram.com/ifwhy._/',
     github: 'https://github.com/ifwhy',
-    description: <>Mahasiswa Informatika UNS 2023</>
+    description: <>Informatika UNS 2023</>
+  },
+  {
+    title: 'Mohammad Nazhiif Al-Ghoniy',
+    img: 'https://github.com/nazuhifu.png',
+    ig: 'https://www.instagram.com/nazuhifu',
+    github: 'https://github.com/nazuhifu',
+    description: <>Informatika UNS 2023</>
   }
 ]
 
-function Feature({ img, title, description, ig }) {
+function Feature({ img, title, description, ig, github }) {
   return (
     <div>
       <div className='text--center'>
@@ -34,7 +41,7 @@ function Feature({ img, title, description, ig }) {
             <Instagram />
           </a>
           <a
-            href={ig}
+            href={github}
             className='text-2xl text-black hover:text-blue-500 dark:text-white'
             target='_blank'
             rel='noreferrer noopener'
@@ -42,7 +49,7 @@ function Feature({ img, title, description, ig }) {
             <GithubIcon />
           </a>
         </div>
-        <p className='mb-2 text-center text-xl font-bold'>{title}</p>
+        <p className='mb-2 text-center text-lg font-bold sm:text-xl'>{title}</p>
 
         <p className='mx-auto max-w-sm'>{description}</p>
       </div>
@@ -52,10 +59,10 @@ function Feature({ img, title, description, ig }) {
 
 export default function HomepageFeatures() {
   return (
-    <section className='py-10'>
+    <section className='py-10 dark:bg-[#010816]'>
       <div className='mx-auto max-w-7xl'>
-        <h2 className='text-center text-3xl font-bold'>Tim Asisten Praktikum</h2>
-        <div className='flex w-full justify-center gap-5'>
+        <h2 className='text-center text-2xl font-bold sm:text-3xl'>Tim Asisten Praktikum</h2>
+        <div className='flex w-full flex-wrap justify-center gap-5'>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

@@ -43,6 +43,11 @@
       <br><b>Ivan Wahyu Nugroho</b> (IF 2023)  
       <br>🚀 <a href="https://github.com/ifwhy" target="_blank">ifwhy</a>
     </td>
+    <td align="center">
+      <img src="https://github.com/nazuhifu.png" width="100" height="100" style="border-radius:50%;" alt="Ivan"/>
+      <br><b>Mohammad Nazhiif Al-Ghoniy</b> (IF 2023)  
+      <br>🚀 <a href="https://github.com/nazuhifu" target="_blank">nazuhifu</a>
+    </td>
   </tr>
 </table>
 </div>

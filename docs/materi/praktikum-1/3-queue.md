@@ -10,7 +10,7 @@ Queue adalah struktur data **FIFO (First-In-First-Out)** yang berarti elemen yan
 
 Bayangkan sebuah antrean di ATM, di mana orang pertama yang datang akan menjadi orang pertama yang dilayani. Berikut ilustrasinya:
 
-![Ilustrasi Queue](https://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg)
+<img src="https://miro.medium.com/v2/resize:fit:910/1*1073fPLCqRAIzsL_chFDug.jpeg" alt="Ilustrasi Queue" width="75%"/>
 
 Dalam bahasa **Java**, Queue diimplementasikan menggunakan **interface `Queue`** yang berada dalam package `java.util`. Salah satu implementasi paling umum dari Queue adalah menggunakan **LinkedList**.
 

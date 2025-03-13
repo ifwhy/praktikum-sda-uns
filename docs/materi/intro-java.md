@@ -22,7 +22,10 @@ Berikut adalah beberapa sintaks dasar dalam Java:
 ```java
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, Java!"); // Cetak teks ke layar
+        int number = 1;
+        System.out.println("Hello, Java!"); // Cetak teks ke layar sebaris
+        System.out.print("Hello, World!"); // Cetak teks ke layar
+        System.out.printf("Hello, Number is %d", number); // Cetak teks ke layar (mirip bahasa C)
     }
 }
 ```

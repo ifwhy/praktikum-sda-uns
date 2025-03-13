@@ -8,7 +8,7 @@ Stack adalah struktur data **LIFO (Last-In, First-Out)**, yang berarti elemen ya
 
 ### Ilustrasi Stack
 
-![Ilustrasi Stack](https://visualgo.net/img/stack_illustration.png)
+<img src="https://visualgo.net/img/stack_illustration.png" alt="Ilustrasi Stack" width="75%"/>
 
 Dalam bahasa **Java**, stack dapat digunakan melalui kelas `Stack` yang terdapat dalam package `java.util`. Stack diimplementasikan menggunakan **Linked List** atau **ArrayList** sebagai penyimpanan elemen-elemen di dalamnya.
 
