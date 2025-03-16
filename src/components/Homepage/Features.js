@@ -5,7 +5,7 @@ const FeatureList = [
     title: 'Moh Ferdinand Ramdhani',
     img: 'https://github.com/mferdinandr.png',
     ig: 'https://www.instagram.com/m.ferdinram/',
-    github: 'https://github.com/mferdindr',
+    github: 'https://github.com/mferdinandr',
     description: <>Informatika UNS 2023</>
   },
   {
