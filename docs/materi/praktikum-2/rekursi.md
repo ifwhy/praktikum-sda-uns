@@ -1,4 +1,4 @@
-# 1 - Konsep Rekursi
+# 📌 Konsep Rekursi
 
 **Rekursi** adalah sebuah cara untuk mendefinisikan sebuah permasalahan menggunakan _versi permasalahan itu sendiri yang lebih simpel_. Dalam dunia pemrograman, paradigma rekursi biasanya diterapkan dalam pembuatan **Fungsi Rekursif**. **Fungsi Rekursif** adalah sebuah fungsi yang memanggil dirinya sendiri.
 
@@ -23,7 +23,7 @@ public class Main {
 
 Pada fungsi `recurse()` terdapat pemanggilan ke fungsi `recurse()` itu sendiri. Alhasil, jika fungsi `recurse()` kita panggil dari `main()` maka akan memanggil dirinya sendiri tanpa henti, yang akan menimbulkan **infinite loop**. Kita akan mempelajari cara untuk menanggulanginya menggunakan **base case** nanti.
 
-# 2 - Kegunaan Rekursi dan Interpretasi Matematis
+## 🧮 Kegunaan Rekursi dan Interpretasi Matematis
 
 > Mengapa rekursi merupakan paradigma yang penting dan pantas untuk kita pelajari?
 
@@ -68,11 +68,11 @@ Pada **pendekatan kedua**, pada masing-masing `n`, fungsi akan memanggil dirinya
 
 Contoh di atas mungkin merupakan contoh yang sangat naif untuk implementasi fungsi rekursif, namun merupakan kasus yang mudah untuk dijelaskan. Jika kalian sudah memahami konsep di atas, cobalah untuk memahami kasus yang lebih complicated seperti [recursive factorial](https://www.google.com/search?q=recursive+factorial) atau [recursion tree traversal](https://www.google.com/search?q=tree+traversal+recursion).
 
-# 3 - Bagian-bagian Algoritma Rekursif
+## 🧩 Bagian-bagian Algoritma Rekursif
 
 > Disclaimer: Ada banyak opini pakar mengenai pembagian dari algoritma rekursif. Materi yang diberikan di bawah mungkin berbeda dengan opini beberapa pakar, namun kami nilai cukup untuk membentuk pemahaman mengenai fungsi rekursif.
 
-## 1. Base Case
+### 1. Base Case
 
 Sepanjang materi, ada beberapa pembahasan mengenai Base Case. Base Case merupakan batasan yang **harus dibuat setiap kali kita membuat sebuah fungsi rekursif** supaya fungsi yang baru saja kita buat tidak menjadi _infinite loop_ atau perulangan infinit yang disebabkan oleh perulangan/rekursi yang tidak dibatasi.
 
@@ -117,7 +117,7 @@ Di saat komputer memulai komputasi dengan `n = 5`, komputer mengevaluasi stateme
 
 >Tanpa **Base Case**, prpogram akan berjalan tanpa henti dan menyebabkan ***Stack Overflow***
 
-## 2. Simplifikasi Permasalahan
+### 2. Simplifikasi Permasalahan
 
 Komponen ini adalah bagaimana suatu masalah besar bisa dipecah menjadi sub-masalah yang lebih kecil hingga mencapai base case.
 ```
@@ -128,17 +128,17 @@ f(3) = 3 + f(2)
 Dengan menggunakan rumus `f` penjumlahan yang sama, komputer yang menghitung `f(3)` secara langsung (iteratif), maka komputer akan mengeksekusi 3 suku penambahan `(1 + 2 + 3)`, sedangkan komputer yang menghitung `f(3)` secara rekursif akan mengeksekusi 2 suku penambahan 2 kali, beserta 1 base case. 
 >Konsep simplifikasi/pemecahan masalah ini akan dipelajari lebih lanjut pada algoritma _divide and conquer_.
 
-# Kelebihan dan Kekurangan Rekursif
-## Kelebihan
+## Kelebihan dan Kekurangan Rekursif
+### ➕ Kelebihan
 1. Kode lebih sederhana untuk masalah yang dapat direpresentasikan secara rekursif (contoh: traversal pohon, Fibonacci, DFS dalam graf).
 2. Mudah dibaca karena mengikuti struktur masalah secara alami.
 3. Cocok untuk algoritma Divide & Conquer, seperti Merge Sort dan Quick Sort.
-## Kekurangan
+### ➖ Kekurangan
 1. Lebih lambat dibanding iterasi karena adanya overhead pemanggilan fungsi berulang kali.
 2. Memerlukan lebih banyak memori karena setiap pemanggilan fungsi memanfaatkan stack tambahan.
 3. Potensi stack overflow jika tidak ada base case atau jika kedalaman rekursi terlalu besar.
 
-# Pranala Luar
+## 📘 Pranala Luar
 
 Jika teman-teman mengalami kesulitan dalam memahami materi ini, atau ingin mendapatkan opini/pembawaan lain terhadap materi ini, kami menyarankan beberapa bacaan di bawah
 
