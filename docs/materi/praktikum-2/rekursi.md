@@ -138,7 +138,7 @@ Dengan menggunakan rumus `f` penjumlahan yang sama, komputer yang menghitung `f(
 2. Memerlukan lebih banyak memori karena setiap pemanggilan fungsi memanfaatkan stack tambahan.
 3. Potensi stack overflow jika tidak ada base case atau jika kedalaman rekursi terlalu besar.
 
-## 📘 Referensi
+## 📘 Pranala Luar
 
 Jika teman-teman mengalami kesulitan dalam memahami materi ini, atau ingin mendapatkan opini/pembawaan lain terhadap materi ini, kami menyarankan beberapa bacaan di bawah
 
