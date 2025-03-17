@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # 📌 Konsep Rekursi
 
 **Rekursi** adalah sebuah cara untuk mendefinisikan sebuah permasalahan menggunakan _versi permasalahan itu sendiri yang lebih simpel_. Dalam dunia pemrograman, paradigma rekursi biasanya diterapkan dalam pembuatan **Fungsi Rekursif**. **Fungsi Rekursif** adalah sebuah fungsi yang memanggil dirinya sendiri.
