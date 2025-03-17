@@ -123,7 +123,7 @@ f(1) = 1        <- Base Case
 Di saat komputer memulai komputasi dengan `n = 5`, komputer mengevaluasi statement `f(5) = 5 + f(4)`. Setelah itu, karena komputer diminta untuk memanggil `f(4)`, maka komputer mengevaluasi statement `f(4) = 4 + f(3)`, dan seterusnya untuk setiap pemanggilan fungsi, hingga komputer mencapai `f(1)`. Di titik tersebut, komputer mengetahui jika solusi dari fungsi tersebut adalah `1`. Komputer lalu mengeluarkan memorinya untuk fungsi-fungsi sebelumnya, dimulai dengan `f(2)` yang akan mengevaluasi `f(2) = 1 + f(1)`, hanya saja nilai `f(1)` sudah diketahui. Step ini diulangi untuk setiap fungsi, hingga pemanggilan fungsi pertama sewaktu komputer memulai komputasi.
 
 :::info[Base Case]
-Tanpa **Base Case**, prpogram akan berjalan tanpa henti dan menyebabkan **_Stack Overflow_**
+Tanpa **Base Case**, program akan berjalan tanpa henti dan menyebabkan **_Stack Overflow_**
 :::
 
 ### 2. Simplifikasi Permasalahan
