@@ -6,6 +6,12 @@
 
 @custom-variant dark (&:is([data-theme="dark"] *));
 
+@utility {
+  .debug {
+    @apply border border-red-500;
+  }
+}
+
 @theme {
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));

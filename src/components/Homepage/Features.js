@@ -6,6 +6,7 @@ const FeatureList = [
     img: 'https://github.com/mferdinandr.png',
     ig: 'https://www.instagram.com/m.ferdinram/',
     github: 'https://github.com/mferdinandr',
+    delay: 1000,
     description: <>Informatika UNS 2023</>
   },
   {
@@ -13,20 +14,22 @@ const FeatureList = [
     img: 'https://github.com/ifwhy.png',
     ig: 'https://www.instagram.com/ifwhy._/',
     github: 'https://github.com/ifwhy',
+    delay: 2000,
     description: <>Informatika UNS 2023</>
   },
   {
     title: 'Mohammad Nazhiif Al-Ghoniy',
     img: 'https://github.com/nazuhifu.png',
+    delay: 3000,
     ig: 'https://www.instagram.com/nazuhifu',
     github: 'https://github.com/nazuhifu',
     description: <>Informatika UNS 2023</>
   }
 ]
 
-function Feature({ img, title, description, ig, github }) {
+function Feature({ img, title, description, ig, github, delay }) {
   return (
-    <div>
+    <div data-aos='zoom-in' data-aos-delay={delay} data-aos-duration='1000' data-aos-once='true'>
       <div className='text--center'>
         <img src={img} alt={title} className='h-32 w-32 rounded-full' />
       </div>
@@ -51,7 +54,7 @@ function Feature({ img, title, description, ig, github }) {
         </div>
         <p className='mb-2 text-center text-lg font-bold sm:text-xl'>{title}</p>
 
-        <p className='mx-auto max-w-sm'>{description}</p>
+        <p className='mx-auto max-w-sm text-white'>{description}</p>
       </div>
     </div>
   )
@@ -59,9 +62,17 @@ function Feature({ img, title, description, ig, github }) {
 
 export default function HomepageFeatures() {
   return (
-    <section className='py-10 dark:bg-[#010816]'>
-      <div className='mx-auto max-w-7xl'>
-        <h2 className='text-center text-2xl font-bold sm:text-3xl'>Tim Asisten Praktikum</h2>
+    <section className='pb-20 dark:bg-[#010816]'>
+      <div className='mx-auto max-w-7xl py-10'>
+        <h2
+          className='text-center text-2xl font-bold sm:text-3xl'
+          data-aos='zoom-in'
+          data-aos-delay='50'
+          data-aos-duration='1000'
+          data-aos-once='true'
+        >
+          Tim Asisten Praktikum
+        </h2>
         <div className='flex w-full flex-wrap justify-center gap-5'>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
