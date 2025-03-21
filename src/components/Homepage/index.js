@@ -51,18 +51,29 @@ function HomepageHeader() {
               SDA di Informatika UNS. <br className='hidden sm:inline' /> Praktikum Struktur Data
               dan Algoritma ini menggunakan bahasa pemrograman Java.{' '}
               <br className='hidden sm:inline' />
-              Materi praktikum dapat di akses melalui <i>link</i> di bawah ini.
+              Materi dan tugas praktikum dapat di akses melalui <i>link</i> di bawah ini.
             </span>
           </p>
 
-          <Button
-            asChild
-            className='border-2 border-white bg-white text-black transition-all duration-300 hover:bg-transparent hover:text-white'
-          >
-            <Link to='/docs/materi/intro' className='hover:bg-transparent hover:text-white'>
-              🚀 Materi Praktikum
-            </Link>
-          </Button>
+          <div className='flex justify-center gap-3'>
+            <Button
+              asChild
+              className='border-2 border-white bg-white text-black transition-all duration-300 hover:bg-transparent hover:text-white'
+            >
+              <Link to='/docs/materi/intro' className='hover:bg-transparent hover:text-white'>
+                🚀 Materi
+              </Link>
+            </Button>
+
+            <Button
+              asChild
+              className='border-2 border-white bg-white text-black transition-all duration-300 hover:bg-transparent hover:text-white'
+            >
+              <Link to='/docs/tugas/tugas-1' className='hover:bg-transparent hover:text-white'>
+                🤖 Tugas
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </header>
