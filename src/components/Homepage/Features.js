@@ -62,7 +62,7 @@ function Feature({ img, title, description, ig, github, delay }) {
 
 export default function HomepageFeatures() {
   return (
-    <section className='pb-20 dark:bg-[#010816]'>
+    <section className='py-10 dark:bg-[#010816]'>
       <div className='mx-auto max-w-7xl py-10'>
         <h2
           className='text-center text-2xl font-bold sm:text-3xl'
