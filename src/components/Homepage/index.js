@@ -17,7 +17,7 @@ function HomepageHeader() {
     <header
       className='w-full object-cover px-3 py-36 text-left text-white lg:h-screen'
       style={{
-        backgroundImage: `url('https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/PDaTSuJ/videoblocks-4k-2779-blue_smvurnutd_thumbnail-1080_01.png')`,
+        backgroundImage: `url('/img/bg-hero.png')`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPositionY: 'center',

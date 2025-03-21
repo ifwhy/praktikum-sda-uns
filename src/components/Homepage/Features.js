@@ -6,7 +6,7 @@ const FeatureList = [
     img: 'https://github.com/mferdinandr.png',
     ig: 'https://www.instagram.com/m.ferdinram/',
     github: 'https://github.com/mferdinandr',
-    delay: 1000,
+    delay: 500,
     description: <>Informatika UNS 2023</>
   },
   {
@@ -14,13 +14,13 @@ const FeatureList = [
     img: 'https://github.com/ifwhy.png',
     ig: 'https://www.instagram.com/ifwhy._/',
     github: 'https://github.com/ifwhy',
-    delay: 2000,
+    delay: 1000,
     description: <>Informatika UNS 2023</>
   },
   {
     title: 'Mohammad Nazhiif Al-Ghoniy',
     img: 'https://github.com/nazuhifu.png',
-    delay: 3000,
+    delay: 1500,
     ig: 'https://www.instagram.com/nazuhifu',
     github: 'https://github.com/nazuhifu',
     description: <>Informatika UNS 2023</>
@@ -68,7 +68,7 @@ export default function HomepageFeatures() {
           className='text-center text-2xl font-bold sm:text-3xl'
           data-aos='zoom-in'
           data-aos-delay='50'
-          data-aos-duration='1000'
+          data-aos-duration='500'
           data-aos-once='true'
         >
           Tim Asisten Praktikum

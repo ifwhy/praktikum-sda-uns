@@ -3,12 +3,7 @@ import React from 'react'
 export default function FooterLayout({ style, links, logo, copyright }) {
   return (
     <footer className='bg-gray-100 dark:bg-[#010816]'>
-      <div
-        className='mx-auto max-w-7xl px-4 pt-10 pb-5'
-        data-aos='zoom-in'
-        data-aos-duration='2500'
-        data-aos-once='true'
-      >
+      <div className='mx-auto max-w-7xl px-4 pt-10 pb-5'>
         {links}
         {(logo || copyright) && (
           <div className='footer__bottom text--center font-semibold'>
