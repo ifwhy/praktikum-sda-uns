@@ -1,7 +1,7 @@
 {
   "name": "docusaurus-tailwind-shadcn-template",
   "description": "Intergrating Tailwind CSS and Shadcn/ui with Docusaurus website template",
-  "author": "Thành Nam Nguyễn",
+  "author": "Moh Ferdinand Ramdhani, Ivan Wahyu Nugroho",
   "repository": {
     "type": "git",
     "url": "https://github.com/ifwhy/praktikum-sda-uns"

@@ -1,6 +1,7 @@
 import Layout from '@theme/Layout'
 import Heading from '@theme/Heading'
 import Link from '@docusaurus/Link'
+import { useEffect } from 'react'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import HomepageFeatures from './Features'
 import { Button } from '../ui/button'
@@ -8,7 +9,9 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 function HomepageHeader() {
-  AOS.init()
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   return (
     <header
