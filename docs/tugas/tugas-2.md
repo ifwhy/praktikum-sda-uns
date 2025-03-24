@@ -72,7 +72,7 @@ Buat tabel perbandingan hasil eksekusi dengan **rumus rekursif** Tower of Hanoi:
 
 ### 5️⃣ **Diskusi**
 
-💡 **Mengapa Tower of Hanoi sangat lambat untuk n besar?**  
+💡 **Mengapa Tower of Hanoi sangat lambat untuk $n$ besar?**  
 Berikan analisis berdasarkan hasil pengujian.
 
 ---
