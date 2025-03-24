@@ -100,32 +100,76 @@ Di sini, kompleksitasnya adalah $O(N \, log(N))$ karena ada dua loop yang bergan
 ### $O(N!)$: **Faktorial** 🧮
 
 ```java
-// ...
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
-public class Example {
+public class TravelingSalesman {
+    private static int n = 4; // Jumlah kota
+    private static int[][] graph = {
+        {0, 10, 15, 20},
+        {10, 0, 35, 25},
+        {15, 35, 0, 30},
+        {20, 25, 30, 0}
+    };
+
+    private static int tsp(int start) {
+        List<Integer> cities = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            if (i != start) cities.add(i);
+        }
+
+        return permuteAndFindMin(start, cities);
+    }
+
+    private static int permuteAndFindMin(int start, List<Integer> cities) {
+        int minCost = Integer.MAX_VALUE;
+        List<List<Integer>> permutations = generatePermutations(cities);
+
+        for (List<Integer> perm : permutations) {
+            int cost = 0, prev = start;
+            for (int city : perm) {
+                cost += graph[prev][city];
+                prev = city;
+            }
+            cost += graph[prev][start]; // Kembali ke kota awal
+            minCost = Math.min(minCost, cost);
+        }
+        return minCost;
+    }
+
+    private static List<List<Integer>> generatePermutations(List<Integer> cities) {
+        List<List<Integer>> result = new ArrayList<>();
+        backtrack(cities, new ArrayList<>(), result);
+        return result;
+    }
+
+    private static void backtrack(List<Integer> cities, List<Integer> temp, List<List<Integer>> result) {
+        if (temp.size() == cities.size()) {
+            result.add(new ArrayList<>(temp));
+            return;
+        }
+        for (Integer city : cities) {
+            if (!temp.contains(city)) {
+                temp.add(city);
+                backtrack(cities, temp, result);
+                temp.remove(temp.size() - 1);
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        // Membuat array integer
-        Integer[] array = {1, 2, 3, 4, 5};
-
-        // Mengubah array menjadi List
-        List<Integer> list = Arrays.asList(array);
-
-        // Sekarang list berisi elemen-elemen dari array
-        System.out.println(list); // Output: [1, 2, 3, 4, 5]
+        int minCost = tsp(0);
+        System.out.println("Biaya perjalanan terpendek: " + minCost);
     }
 }
-// ...
 ```
 
-Proses yang berlipat ganda mengarah pada kompleksitas $O(N!)$ yang sangat tidak efisien.
+Contoh di atas adalah algoritma _Traveling Salesman Problem_ (TSP). Proses yang berlipat ganda mengarah pada kompleksitas $O(N!)$ yang sangat tidak efisien.
 
 ## 3️⃣ - **Perbandingan Pertumbuhan Kompleksitas** 📊
 
 ![Gambar perbandingan kompleksitas](https://i.ytimg.com/vi/XiGedDZGOM8/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCoZ7k4wh3HCXJkQQ0zw_wgCF8ymw)
 
-Pengembangan algoritma idealnya diusahakan mendapatkan kompleksitas $O(1)$ atau $O(logn)$. Sayangnya, kita tidak selalu bisa mencapai kompleksitas terbaik dalam merancang algoritma. Jika tidak dapat mencapai kompleksitas maksimal, hal terbaik yang dapat kita lakukan adalah melihat apakah masalah dapat diselesaikan dengan algoritma yang sudah ada terlebih dahulu, sebelum mengembangkan algoritma baru. Hal ini memastikan kita mendapatkan kompleksitas yang paling efisien. 🚀
+Pengembangan algoritma idealnya diusahakan mendapatkan kompleksitas $O(1)$ atau $O(log \,n)$. Sayangnya, kita tidak selalu bisa mencapai kompleksitas terbaik dalam merancang algoritma. Jika tidak dapat mencapai kompleksitas maksimal, hal terbaik yang dapat kita lakukan adalah melihat apakah masalah dapat diselesaikan dengan algoritma yang sudah ada terlebih dahulu, sebelum mengembangkan algoritma baru. Hal ini memastikan kita mendapatkan kompleksitas yang paling efisien. 🚀
 
 ## 4️⃣ - **Kesimpulan** 📝
 
