@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # 📌 Analisis Kompleksitas Algoritma
 
-Pada semester pertama, kita telah mempelajari bagaimana membuat algoritma untuk menyelesaikan suatu masalah. Namun, hal tersebut tidak cukup. Algoritma tidak hanya harus **benar** (efektif), tetapi juga harus **mangkus** (efisien). Sehingga dapat dikatakan bahwa algoritma yang baik adalah algoritma yang mangkus. Kemangkusan suatu algoritma diukur dari sisi **waktu** (time) eksekusi serta penggunaan **memori** (_space_). 💻🧠
+Pada semester pertama, kita telah mempelajari bagaimana membuat algoritma untuk menyelesaikan suatu masalah. Namun, hal tersebut tidak cukup. Algoritma tidak hanya harus **benar** (efektif), tetapi juga harus **mangkus** (efisien). Sehingga dapat dikatakan bahwa algoritma yang baik adalah algoritma yang mangkus. Kemangkusan suatu algoritma diukur dari sisi **waktu** (_time_) eksekusi serta penggunaan **memori** (_space_). 💻🧠
 
 ## 1️⃣ - **Notasi Asimtotik**
 
@@ -45,7 +45,7 @@ for (i = 1; i <= n; i++) {
 
 Di sini, `"Hello, world!"` akan dicetak sebanyak $N$ kali. Sehingga, kompleksitas waktu dari kode di atas adalah $$O(N)$$.
 
-### O(N²): **Kuadratik** 🔲
+### $O(N^2)$: **Kuadratik** 🔲
 
 ```java
 // ...
@@ -68,7 +68,7 @@ $= \frac{N^2}{2} + \frac{N}{2}$
 
 Jadi, kompleksitasnya adalah $$O(N^²)$$.
 
-### $O(log N)$: **Logaritmik** 🔍
+### $O(log \, N)$: **Logaritmik** 🔍
 
 ```java
 // ...
@@ -82,7 +82,7 @@ while (i > 0) {
 
 Di sini, kita harus mencari $x$ terkecil sehingga $\frac{N}{2^x} \leq N$. Maka, kompleksitasnya adalah $$O(log N)$$.
 
-### $O(N\, log N)$: **Linearitmik** 🌀
+### $O(N\, log (N))$: **Linearitmik** 🌀
 
 ```java
 // ...
