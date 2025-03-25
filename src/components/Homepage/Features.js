@@ -52,9 +52,11 @@ function Feature({ img, title, description, ig, github, delay }) {
             <GithubIcon />
           </a>
         </div>
-        <p className='mb-2 text-center text-lg font-bold sm:text-xl'>{title}</p>
+        <p className='mb-2 text-center text-lg font-bold text-black sm:text-xl dark:text-white'>
+          {title}
+        </p>
 
-        <p className='mx-auto max-w-sm text-white'>{description}</p>
+        <p className='mx-auto max-w-sm font-semibold text-black dark:text-white'>{description}</p>
       </div>
     </div>
   )
