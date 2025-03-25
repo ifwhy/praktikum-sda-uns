@@ -66,7 +66,7 @@ $= \frac{N(N+1)}{2}$
 
 $= \frac{N^2}{2} + \frac{N}{2}$
 
-Jadi, kompleksitasnya adalah $$O(N^²)$$.
+Jadi, kompleksitasnya adalah $$O(N^2)$$.
 
 ### $O(log \, N)$: **Logaritmik** 🔍
 
