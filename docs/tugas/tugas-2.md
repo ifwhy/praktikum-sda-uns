@@ -18,6 +18,10 @@ Tower of Hanoi adalah teka-teki rekursif di mana $n$ cakram harus dipindahkan da
 
 🔗 **Referensi Video:** [Tower of Hanoi - Visualisasi](https://www.youtube.com/watch?v=q6RicK1FCUs)
 
+<div align="center">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/q6RicK1FCUs?si=1805em0cjzzPIojW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ---
 
 ## 🎯 **Tugas**
@@ -51,13 +55,13 @@ Buat tabel perbandingan hasil eksekusi dengan **rumus rekursif** Tower of Hanoi:
 
 | 🎯 **$n$ (Jumlah Cakram)** | 📐 **Perhitungan Langkah $(2ⁿ - 1)$** | ⚡ **Langkah Nyata (Program)** |
 | -------------------------- | ------------------------------------- | ------------------------------ |
-| 1                          | 1                                     | ?                              |
-| 2                          | 3                                     | ?                              |
-| 3                          | 7                                     | ?                              |
-| 4                          | 15                                    | ?                              |
-| 5                          | 31                                    | ?                              |
-| 10                         | 1.023                                 | ?                              |
-| 20                         | 1.048.575                             | ?                              |
+| $1$                        | $1$                                   | $?$                            |
+| $2$                        | $3$                                   | $?$                            |
+| $3$                        | $7$                                   | $?$                            |
+| $4$                        | $15$                                  | $?$                            |
+| $5$                        | $31$                                  | $?$                            |
+| $10$                       | $1.023$                               | $?$                            |
+| $20$                       | $1.048.575$                           | $?$                            |
 
 ---
 

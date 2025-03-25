@@ -78,9 +78,9 @@ Cek apakah mahasiswa dengan NIM **L0123068** ada dalam `dataMhs`:
 
 ```java
 if (dataMhs.containsKey("L0123068")) {
-    System.out.println("✅ L0123068 merupakan mahasiswa UNS.");
+    System.out.println("L0123068 merupakan mahasiswa UNS.");
 } else {
-    System.out.println("❌ L0123068 bukan merupakan mahasiswa UNS.");
+    System.out.println("L0123068 bukan merupakan mahasiswa UNS.");
 }
 ```
 
@@ -102,7 +102,7 @@ Gunakan **for-each loop** untuk menampilkan semua data mahasiswa:
 
 ```java
 for (Map.Entry<String, String> entry : dataMhs.entrySet()) {
-    System.out.println("🎓 NIM: " + entry.getKey() + " | Nama: " + entry.getValue());
+    System.out.println("NIM: " + entry.getKey() + " | Nama: " + entry.getValue());
 }
 ```
 
@@ -110,7 +110,7 @@ Atau dengan **forEach (Java 8+):**
 
 ```java
 dataMhs.forEach((nim, nama) ->
-    System.out.println("🎓 NIM: " + nim + " | Nama: " + nama)
+    System.out.println("NIM: " + nim + " | Nama: " + nama)
 );
 ```
 
