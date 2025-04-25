@@ -1,22 +1,28 @@
-# 2 - Binary Search Tree
+---
+sidebar_position: 2
+---
+
+# 📌 Binary Search Tree
 
 ## Konsep Binary Search Tree
+
 Binary Search Tree adalah struktur data Binary Tree berbasis node yang memiliki beberapa aturan seperti berikut:
 
-Subtree sebelah kiri dari sebuah node hanya berisi node dengan kunci (key) yang lebih kecil dari kunci node.<br>
-Subtree sebelah kanan dari sebuah node hanya berisi node dengan kunci (key) lebih besar dari kunci node.<br>
-Subtree sebelah kiri dan kanan masing-masing juga harus berupa pohon pencarian biner, serta tidak ada kunci yang sama.<br>
+Subtree sebelah kiri dari sebuah node hanya berisi node dengan kunci (key) yang lebih kecil dari kunci node.<br/>
+Subtree sebelah kanan dari sebuah node hanya berisi node dengan kunci (key) lebih besar dari kunci node.<br/>
+Subtree sebelah kiri dan kanan masing-masing juga harus berupa pohon pencarian biner, serta tidak ada kunci yang sama.<br/>
 
 ![Gambar Binary Tree](https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png)
 
 ## Implementasi Binary Search Tree
 
 ### Searching
+
 Ilustrasi untuk mencari 6 di pohon atas:
+
 1. Mulai dari akar.
 2. Bandingkan elemen pencarian dengan root, jika kurang dari root, maka panggil subtree kiri secara rekursif, jika tidak panggil subtree kanan secara rekursif.
 3. Jika elemen yang dicari ditemukan di mana saja, kembalikan true, jika tidak, kembalikan false.
-
 
 ```java
 // Function to search a given key in a given BST
@@ -37,12 +43,12 @@ static Node search(Node root, int key) {
 ### Insertion
 
 Ilustrasi untuk menyisipkan 2 di bawah pohon:
+
 1. Mulai dari akar.
 2. Bandingkan elemen penyisipan dengan root, jika kurang dari root, maka panggil subtree kiri secara rekursif, jika tidak panggil subtree kanan secara rekursif.
 3. Setelah mencapai akhir, masukkan saja simpul itu di kiri (jika kurang dari arus) yang lain di kanan.
 
 ![Gambar Binary Tree](https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png)
-
 
 ```java
 // Java program to demonstrate insertion
@@ -117,7 +123,8 @@ class BST {
 ```
 
 Output:
-```
+
+```output
 20
 30
 40
@@ -130,28 +137,34 @@ Output:
 ### Deletion
 
 Ketika kami menghapus sebuah node, tiga kemungkinan muncul.
-1) Node yang akan dihapus adalah daunnya: Cukup hapus dari pohonnya.
-```
+
+1. Node yang akan dihapus adalah daunnya: Cukup hapus dari pohonnya.
+
+```tree
               50                            50
            /     \         delete(20)      /   \
-          30      70       --------->    30     70 
-         /  \    /  \                     \    /  \ 
+          30      70       --------->    30     70
+         /  \    /  \                     \    /  \
        20   40  60   80                   40  60   80
 ```
-2) Node yang akan dihapus hanya memiliki satu anak: Salin anak ke node dan hapus anak
-```
+
+2. Node yang akan dihapus hanya memiliki satu anak: Salin anak ke node dan hapus anak
+
+```tree
               50                            50
            /     \         delete(30)      /   \
-          30      70       --------->    40     70 
-            \    /  \                          /  \ 
+          30      70       --------->    40     70
+            \    /  \                          /  \
             40  60   80                       60   80
 ```
-3) Node yang akan dihapus memiliki dua anak: Temukan penerus berurutan dari node tersebut. Salin konten penerus inorder ke node dan hapus penerus inorder. Perhatikan bahwa pendahulunya inorder juga dapat digunakan.
-```
+
+3. Node yang akan dihapus memiliki dua anak: Temukan penerus berurutan dari node tersebut. Salin konten penerus inorder ke node dan hapus penerus inorder. Perhatikan bahwa pendahulunya inorder juga dapat digunakan.
+
+```tree
               50                            60
            /     \         delete(50)      /   \
-          40      70       --------->    40    70 
-                 /  \                            \ 
+          40      70       --------->    40    70
+                 /  \                            \
                 60   80                           80
 ```
 
@@ -260,8 +273,9 @@ class BinarySearchTree {
 ```
 
 Output:
+
 ```
-Inorder traversal of the given tree 
+Inorder traversal of the given tree
 20 30 40 50 60 70 80
 Delete 20
 Inorder traversal of the modified tree

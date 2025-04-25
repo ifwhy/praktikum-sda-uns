@@ -1,10 +1,15 @@
-# 1 - Binary Tree
+---
+sidebar_position: 1
+---
+
+# 📌 Binary Tree
 
 ## Konsep Binary Tree
+
 Tree merupakan struktur data yang biasanya tidak kontinu, dimana sebuah node bisa memiliki beberapa "anak" (child node), dan berbeda dengan Graph, jalan menuju sebuah child node hanya bisa dicapai melalui maksimal 1 node, dimana pada Graph, dimungkinkan bahwa 1 node bisa dicapai dari banyak node lainnya. Sebuah node yang tidak memiliki child node sama sekali dinamakan leaf node.
 
-Jenis Tree yang paling umum digunakan adalah Binary Tree, yang sebenarnya memiliki konsep yang sama dengan Tree pada umumnya. Namun bedanya, Binary Tree memiliki jumlah maksimal 2 child, yang secara spesifik dapat disebut left child dan right child.  
-  
+Jenis Tree yang paling umum digunakan adalah Binary Tree, yang sebenarnya memiliki konsep yang sama dengan Tree pada umumnya. Namun bedanya, Binary Tree memiliki jumlah maksimal 2 child, yang secara spesifik dapat disebut left child dan right child.
+
 ![Gambar Binary Tree](https://www.geeksforgeeks.org/wp-content/uploads/binary-tree-to-DLL.png)
 
 ## Implementasi Binary Tree
@@ -66,7 +71,8 @@ public class Main {
 ```
 
 ### Insertion
-Idenya adalah untuk melakukan traversal urutan level iteratif dari pohon yang diberikan menggunakan queue. Jika kita menemukan sebuah node yang anak kirinya kosong, kita membuat kunci baru sebagai anak kiri dari node tersebut. Lain jika kita menemukan node yang anak kanannya kosong, kita membuat kunci baru sebagai anak kanan. terus sampai kita menemukan simpul yang anak kiri atau kanannya kosong.  
+
+Idenya adalah untuk melakukan traversal urutan level iteratif dari pohon yang diberikan menggunakan queue. Jika kita menemukan sebuah node yang anak kirinya kosong, kita membuat kunci baru sebagai anak kiri dari node tersebut. Lain jika kita menemukan node yang anak kanannya kosong, kita membuat kunci baru sebagai anak kanan. terus sampai kita menemukan simpul yang anak kiri atau kanannya kosong.
 
 ![Gambar Binary Tree](https://media.geeksforgeeks.org/wp-content/uploads/binary-tree-insertion.png)
 
@@ -166,20 +172,21 @@ public class Main {
 ```
 
 Output:
+
 ```
-Inorder traversal before insertion: 7 11 10 15 9 8 
-Inorder traversal after insertion: 7 11 12 10 15 9 8 
+Inorder traversal before insertion: 7 11 10 15 9 8
+Inorder traversal after insertion: 7 11 12 10 15 9 8
 ```
 
 ### Deletion
 
 Algoritma
+
 1. Mulai dari root, temukan node paling dalam dan paling kanan di binary tree dan node yang ingin kita hapus.
 2. Ganti data node paling kanan paling dalam dengan node yang akan dihapus.
-3. Kemudian hapus node paling kanan paling dalam.  
+3. Kemudian hapus node paling kanan paling dalam.
 
 ![Gambar Binary Tree](https://media.geeksforgeeks.org/wp-content/uploads/deletion-in-binary-tree.png)
-
 
 ```java
 import java.util.LinkedList;
@@ -311,7 +318,8 @@ public class Main {
 ```
 
 Output:
+
 ```
-Inorder traversal before deletion : 7 11 12 10 15 9 8 
-Inorder traversal after deletion : 7 8 12 10 15 9 
+Inorder traversal before deletion : 7 11 12 10 15 9 8
+Inorder traversal after deletion : 7 8 12 10 15 9
 ```
