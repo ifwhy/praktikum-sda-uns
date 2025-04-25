@@ -97,6 +97,11 @@ const config = {
             position: 'left'
           },
           {
+            to: '/docs/responsi/responsi-1',
+            label: 'Responsi',
+            position: 'left'
+          },
+          {
             'href': 'https://github.com/ifwhy/praktikum-sda-uns',
             'position': 'right',
             'className': 'header-github-link',
