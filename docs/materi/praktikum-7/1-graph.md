@@ -33,32 +33,35 @@ Matriks ketetanggaan menggunakan array dua dimensi untuk merepresentasikan graf.
 #### ⚽ Contoh: Graf Liga Champions
 
 ```java
-public enum Klub {
+// =====================
+// Matriks Ketetanggaan (Adjacency Matrix)
+// =====================
+
+// Enum Klub
+enum Klub {
     REAL_MADRID,
     CHELSEA,
     AC_MILAN,
-    VALENCIA,
-    JUMLAH_KLUB
-};
+    VALENCIA;
+    public static final int JUMLAH_KLUB = values().length;
+}
 
-public enum Hasil {
+// Enum Hasil
+enum Hasil {
     MENANG,
     SERI,
     KALAH
-};
+}
 
-// ...
+// Matriks ketetanggaan
+Hasil[][] pertandingan = new Hasil[Klub.JUMLAH_KLUB][Klub.JUMLAH_KLUB];
 
-// matriks ketetanggaan
-Hasil pertandingan[JUMLAH_KLUB][JUMLAH_KLUB];
+// Contoh pengisian
+pertandingan[Klub.AC_MILAN.ordinal()][Klub.VALENCIA.ordinal()] = Hasil.MENANG;
+pertandingan[Klub.VALENCIA.ordinal()][Klub.AC_MILAN.ordinal()] = Hasil.KALAH;
 
-// ...
-
-pertandingan[AC_MILAN][VALENCIA] = MENANG;
-pertandingan[VALENCIA][AC_MILAN] = KALAH;
-
-pertandingan[REAL_MADRID][CHELSEA] = SERI;
-pertandingan[CHELSEA][REAL_MADRID] = SERI;
+pertandingan[Klub.REAL_MADRID.ordinal()][Klub.CHELSEA.ordinal()] = Hasil.SERI;
+pertandingan[Klub.CHELSEA.ordinal()][Klub.REAL_MADRID.ordinal()] = Hasil.SERI;
 
 // dan seterusnya ...
 ```
@@ -66,39 +69,40 @@ pertandingan[CHELSEA][REAL_MADRID] = SERI;
 #### 🏙️ Contoh: Graf Kota Surakarta
 
 ```java
-public enum Tempat {
+// =====================
+// Matriks Ketetanggaan (Adjacency Matrix)
+// =====================
+
+enum Tempat {
     RUMAH,
     UNIVERSITAS_SEBELAS_MARET,
     RUMAH_SAKIT_DR_MOEWARDI,
     SMP_NEGERI_8_SURAKARTA,
     PECEL_MADIUN_PUCANGSAWIT,
     SMP_NEGERI_4_SURAKARTA,
-    SMA_NEGERI_3_SURAKARTA,
-    JUMLAH_TEMPAT
-};
+    SMA_NEGERI_3_SURAKARTA;
+    public static final int JUMLAH_TEMPAT = values().length;
+}
 
-// ...
+// Matriks ketetanggaan
+// Jarak antar tempat
+// -1.0 jika tidak ada jalur langsung, 0.0 jika ke dirinya sendiri
 
-// matriks ketetanggaan
-double jarak[JUMLAH_TEMPAT][JUMLAH_TEMPAT];
+double[][] jarakMatriks = new double[Tempat.JUMLAH_TEMPAT][Tempat.JUMLAH_TEMPAT];
 
-// ...
+// Contoh pengisian
+jarakMatriks[Tempat.RUMAH.ordinal()][Tempat.UNIVERSITAS_SEBELAS_MARET.ordinal()] = 2.97;
+jarakMatriks[Tempat.UNIVERSITAS_SEBELAS_MARET.ordinal()][Tempat.RUMAH.ordinal()] = 2.97;
 
-jarak[RUMAH][UNIVERSITAS_SEBELAS_MARET] = 2.97;
-jarak[UNIVERSITAS_SEBELAS_MARET][RUMAH] = 2.97;
+jarakMatriks[Tempat.UNIVERSITAS_SEBELAS_MARET.ordinal()][Tempat.RUMAH_SAKIT_DR_MOEWARDI.ordinal()] = 2.86;
+jarakMatriks[Tempat.RUMAH_SAKIT_DR_MOEWARDI.ordinal()][Tempat.UNIVERSITAS_SEBELAS_MARET.ordinal()] = 2.86;
 
-jarak[UNIVERSITAS_SEBELAS_MARET][RUMAH_SAKIT_DR_MOEWARDI] = 2.86;
-jarak[RUMAH_SAKIT_DR_MOEWARDI][UNIVERSITAS_SEBELAS_MARET] = 2.86;
+jarakMatriks[Tempat.PECEL_MADIUN_PUCANGSAWIT.ordinal()][Tempat.SMA_NEGERI_3_SURAKARTA.ordinal()] = 2.28;
+jarakMatriks[Tempat.SMA_NEGERI_3_SURAKARTA.ordinal()][Tempat.PECEL_MADIUN_PUCANGSAWIT.ordinal()] = 2.28;
 
-jarak[PECEL_MADIUN_PUCANGSAWIT][SMA_NEGERI_3_SURAKARTA] = 2.28;
-jarak[SMA_NEGERI_3_SURAKARTA][PECEL_MADIUN_PUCANGSAWIT] = 2.28;
-
-// memberikan nilai 0 karena itu merupakan jarak ke dirinya sendiri
-jarak[RUMAH][RUMAH] = 0.0;
-
-// memberikan nilai negatif karena tidak ada jalur langsung dari RUMAH ke SMA NEGERI 3 Surakarta
-jarak[RUMAH][SMA_NEGERI_3_SURAKARTA] = -1.0;
-jarak[SMA_NEGERI_3_SURAKARTA][RUMAH] = -1.0;
+jarakMatriks[Tempat.RUMAH.ordinal()][Tempat.RUMAH.ordinal()] = 0.0;
+jarakMatriks[Tempat.RUMAH.ordinal()][Tempat.SMA_NEGERI_3_SURAKARTA.ordinal()] = -1.0;
+jarakMatriks[Tempat.SMA_NEGERI_3_SURAKARTA.ordinal()][Tempat.RUMAH.ordinal()] = -1.0;
 
 // dan seterusnya ...
 ```
@@ -112,28 +116,31 @@ Daftar ketetanggaan menggunakan array yang berisi daftar tetangga untuk setiap s
 #### ⚽ Contoh: Graf Liga Champions
 
 ```java
+// =====================
+// Daftar Ketetanggaan (Adjacency List)
+// =====================
+
 class Pertandingan {
     Klub lawan;
     Hasil hasil;
-
     Pertandingan(Klub _lawan, Hasil _hasil) {
         lawan = _lawan;
         hasil = _hasil;
     }
-};
+}
 
-// ...
+// Daftar ketetanggaan
+List<List<Pertandingan>> pertandinganList = new ArrayList<>();
+for (int i = 0; i < Klub.JUMLAH_KLUB; i++) {
+    pertandinganList.add(new ArrayList<>());
+}
 
-// daftar ketetanggaan
-List<Pertandingan>[] pertandingan = new ArrayList[JUMLAH_KLUB];
+// Contoh pengisian
+pertandinganList.get(Klub.AC_MILAN.ordinal()).add(new Pertandingan(Klub.VALENCIA, Hasil.MENANG));
+pertandinganList.get(Klub.VALENCIA.ordinal()).add(new Pertandingan(Klub.AC_MILAN, Hasil.KALAH));
 
-// ...
-
-pertandingan[AC_MILAN].add(new Pertandingan(Klub.VALENCIA, Hasil.MENANG));
-pertandingan[VALENCIA].add(new Pertandingan(Klub.AC_MILAN, Hasil.KALAH));
-
-pertandingan[REAL_MADRID].add(new Pertandingan(Klub.CHELSEA, Hasil.SERI));
-pertandingan[CHELSEA].add(new Pertandingan(Klub.REAL_MADRID, Hasil.SERI));
+pertandinganList.get(Klub.REAL_MADRID.ordinal()).add(new Pertandingan(Klub.CHELSEA, Hasil.SERI));
+pertandinganList.get(Klub.CHELSEA.ordinal()).add(new Pertandingan(Klub.REAL_MADRID, Hasil.SERI));
 
 // dan seterusnya ...
 ```
@@ -141,31 +148,33 @@ pertandingan[CHELSEA].add(new Pertandingan(Klub.REAL_MADRID, Hasil.SERI));
 #### 🏙️ Contoh: Graf Kota Surakarta
 
 ```java
+// =====================
+// Daftar Ketetanggaan (Adjacency List)
+// =====================
+
 class Jarak {
     Tempat tujuan;
     double jarak;
-
     Jarak(Tempat _tujuan, double _jarak) {
         tujuan = _tujuan;
         jarak = _jarak;
     }
-};
+}
 
-// ...
+List<List<Jarak>> jarakList = new ArrayList<>();
+for (int i = 0; i < Tempat.JUMLAH_TEMPAT; i++) {
+    jarakList.add(new ArrayList<>());
+}
 
-// daftar ketetanggaan
-List<Jarak>[] jarak = new ArrayList[JUMLAH_TEMPAT];
+// Contoh pengisian
+jarakList.get(Tempat.RUMAH.ordinal()).add(new Jarak(Tempat.UNIVERSITAS_SEBELAS_MARET, 2.97));
+jarakList.get(Tempat.UNIVERSITAS_SEBELAS_MARET.ordinal()).add(new Jarak(Tempat.RUMAH, 2.97));
 
-// ...
+jarakList.get(Tempat.UNIVERSITAS_SEBELAS_MARET.ordinal()).add(new Jarak(Tempat.RUMAH_SAKIT_DR_MOEWARDI, 2.86));
+jarakList.get(Tempat.RUMAH_SAKIT_DR_MOEWARDI.ordinal()).add(new Jarak(Tempat.UNIVERSITAS_SEBELAS_MARET, 2.86));
 
-jarak[RUMAH].add(new Jarak(Tempat.UNIVERSITAS_SEBELAS_MARET, 2.97));
-jarak[UNIVERSITAS_SEBELAS_MARET].add(new Jarak(Tempat.RUMAH, 2.97));
-
-jarak[UNIVERSITAS_SEBELAS_MARET].add(new Jarak(Tempat.RUMAH_SAKIT_DR_MOEWARDI, 2.86));
-jarak[RUMAH_SAKIT_DR_MOEWARDI].add(new Jarak(Tempat.UNIVERSITAS_SEBELAS_MARET, 2.86));
-
-jarak[PECEL_MADIUN_PUCANGSAWIT].add(new Jarak(Tempat.SMA_NEGERI_3_SURAKARTA, 2.28));
-jarak[SMA_NEGERI_3_SURAKARTA].add(new Jarak(Tempat.PECEL_MADIUN_PUCANGSAWIT, 2.28));
+jarakList.get(Tempat.PECEL_MADIUN_PUCANGSAWIT.ordinal()).add(new Jarak(Tempat.SMA_NEGERI_3_SURAKARTA, 2.28));
+jarakList.get(Tempat.SMA_NEGERI_3_SURAKARTA.ordinal()).add(new Jarak(Tempat.PECEL_MADIUN_PUCANGSAWIT, 2.28));
 
 // dan seterusnya ...
 ```
@@ -179,59 +188,60 @@ Daftar sisi merepresentasikan graf sebagai list yang berisi semua sisi.
 #### ⚽ Contoh: Graf Liga Champions
 
 ```java
-class Pertandingan {
+// =====================
+// Daftar Sisi (Edge List)
+// =====================
+
+class PertandinganEdge {
     Klub pemain;
     Klub lawan;
     Hasil hasil;
-
-    Pertandingan(Klub _pemain, Klub _lawan, Hasil _hasil) {
+    PertandinganEdge(Klub _pemain, Klub _lawan, Hasil _hasil) {
         pemain = _pemain;
         lawan = _lawan;
         hasil = _hasil;
     }
-};
+}
 
-// daftar sisi
-List<Pertandingan> pertandingan = new ArrayList<>();
+List<PertandinganEdge> edgeList = new ArrayList<>();
 
-// ...
+// Contoh pengisian
+edgeList.add(new PertandinganEdge(Klub.AC_MILAN, Klub.VALENCIA, Hasil.MENANG));
+edgeList.add(new PertandinganEdge(Klub.VALENCIA, Klub.AC_MILAN, Hasil.KALAH));
 
-pertandingan.add(new Pertandingan(Klub.AC_MILAN, Klub.VALENCIA, Hasil.MENANG));
-pertandingan.add(new Pertandingan(Klub.VALENCIA, Klub.AC_MILAN, Hasil.KALAH));
-
-pertandingan.add(new Pertandingan(Klub.REAL_MADRID, Klub.CHELSEA, Hasil.SERI));
-pertandingan.add(new Pertandingan(Klub.CHELSEA, Klub.REAL_MADRID, Hasil.SERI));
+edgeList.add(new PertandinganEdge(Klub.REAL_MADRID, Klub.CHELSEA, Hasil.SERI));
+edgeList.add(new PertandinganEdge(Klub.CHELSEA, Klub.REAL_MADRID, Hasil.SERI));
 ```
 
 #### 🏙️ Contoh: Graf Kota Surakarta
 
 ```java
-class Jarak {
+// =====================
+// Daftar Sisi (Edge List)
+// =====================
+
+class JarakEdge {
     Tempat asal;
     Tempat tujuan;
     double jarak;
-
-    Jarak(Tempat _asal, Tempat _tujuan, double _jarak) {
+    JarakEdge(Tempat _asal, Tempat _tujuan, double _jarak) {
         asal = _asal;
         tujuan = _tujuan;
         jarak = _jarak;
     }
-};
+}
 
-// daftar sisi
-List<Jarak> jarak = new ArrayList<>();
+List<JarakEdge> edgeJarak = new ArrayList<>();
 
-// ...
+// Contoh pengisian
+edgeJarak.add(new JarakEdge(Tempat.RUMAH, Tempat.UNIVERSITAS_SEBELAS_MARET, 2.97));
+edgeJarak.add(new JarakEdge(Tempat.UNIVERSITAS_SEBELAS_MARET, Tempat.RUMAH, 2.97));
 
-jarak.add(new Jarak(Tempat.RUMAH, Tempat.UNIVERSITAS_SEBELAS_MARET, 2.97));
-jarak.add(new Jarak(Tempat.UNIVERSITAS_SEBELAS_MARET, Tempat.RUMAH, 2.97));
+edgeJarak.add(new JarakEdge(Tempat.UNIVERSITAS_SEBELAS_MARET, Tempat.RUMAH_SAKIT_DR_MOEWARDI, 2.86));
+edgeJarak.add(new JarakEdge(Tempat.RUMAH_SAKIT_DR_MOEWARDI, Tempat.UNIVERSITAS_SEBELAS_MARET, 2.86));
 
-jarak.add(new Jarak(Tempat.UNIVERSITAS_SEBELAS_MARET, Tempat.RUMAH_SAKIT_DR_MOEWARDI, 2.86));
-jarak.add(new Jarak(Tempat.RUMAH_SAKIT_DR_MOEWARDI, Tempat.UNIVERSITAS_SEBELAS_MARET, 2.86));
-
-jarak.add(new Jarak(Tempat.PECEL_MADIUN_PUCANGSAWIT, Tempat.SMA_NEGERI_3_SURAKARTA, 2.28));
-jarak.add(new Jarak(Tempat.SMA_NEGERI_3_SURAKARTA, Tempat.PECEL_MADIUN_PUCANGSAWIT, 2.28));
-
+edgeJarak.add(new JarakEdge(Tempat.PECEL_MADIUN_PUCANGSAWIT, Tempat.SMA_NEGERI_3_SURAKARTA, 2.28));
+edgeJarak.add(new JarakEdge(Tempat.SMA_NEGERI_3_SURAKARTA, Tempat.PECEL_MADIUN_PUCANGSAWIT, 2.28));
 ```
 
 ---
