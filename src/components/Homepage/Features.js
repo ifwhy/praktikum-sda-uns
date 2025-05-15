@@ -28,7 +28,7 @@ const FeatureList = [
   {
     title: 'Muhammad Rafli Werizky',
     img: 'https://github.com/raaflii.png',
-    delay: 1500,
+    delay: 2000,
     ig: 'https://www.instagram.com/m.rafli02',
     github: 'https://github.com/raaflii',
     description: <>Informatika UNS 2023</>
