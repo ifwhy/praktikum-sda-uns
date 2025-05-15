@@ -24,6 +24,14 @@ const FeatureList = [
     ig: 'https://www.instagram.com/nazuhifu',
     github: 'https://github.com/nazuhifu',
     description: <>Informatika UNS 2023</>
+  },
+  {
+    title: 'Muhammad Rafli Werizky',
+    img: 'https://github.com/raaflii.png',
+    delay: 1500,
+    ig: 'https://www.instagram.com/m.rafli02',
+    github: 'https://github.com/raaflii',
+    description: <>Informatika UNS 2023</>
   }
 ]
 
