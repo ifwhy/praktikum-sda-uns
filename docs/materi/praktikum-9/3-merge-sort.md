@@ -15,7 +15,7 @@ _Mergesort_ juga berbasis **divide-and-conquer**. Ia akan membagi array menjadi 
 | Kasus      | Kompleksitas       |
 | ---------- | ------------------ |
 | 🔥 Best    | $O(n \, log \, n)$ |
-| 💡 Average | $O(n \, log \, n$` |
+| 💡 Average | $O(n \, log \, n)$ |
 | ⚠️ Worst   | $O(n \, log \, n)$ |
 | 🧠 Memori  | $O(n)$             |
 
