@@ -48,8 +48,7 @@ Solusinya? Gunakan **Minimum Spanning Tree**! 💡
    ❌ Jika **membentuk siklus** → abaikan edge tersebut
 4. 🔁 Ulangi hingga jumlah edge dalam MST = **(V - 1)**
 
-📎 [Contoh visualisasi](https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/)  
-💻 [Contoh kode sumber](./2-mst-kruskal.cpp)
+📎 [Contoh visualisasi](https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/)
 
 ---
 
@@ -68,8 +67,7 @@ Solusinya? Gunakan **Minimum Spanning Tree**! 💡
    - 🔄 Perbarui bobot MST tetangga dari node tersebut (hanya jika bobot edge lebih kecil dari sebelumnya)
    - 📌 Jika bobot diperbarui → update parent-nya
 
-📎 [Contoh visualisasi](https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/)  
-💻 [Contoh kode sumber](./2-mst-prim.cpp)
+📎 [Contoh visualisasi](https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/)
 
 ---
 
