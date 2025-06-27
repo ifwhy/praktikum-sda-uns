@@ -4,7 +4,7 @@ title: 🚀 Responsi 1
 sidebar_position: 1
 ---
 
-# 🎓 Responsi Praktikum Struktur Data dan Algoritma
+# 🎓 Responsi 1 Praktikum Struktur Data dan Algoritma
 
 Halo, para pejuang koding! 👩‍💻👨‍💻  
 Saatnya unjuk skill dan kreativitas kalian lewat program Java yang _powerful_ dan penuh ide cemerlang! 🌟
